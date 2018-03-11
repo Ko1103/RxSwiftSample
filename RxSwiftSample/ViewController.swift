@@ -7,23 +7,44 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var titleTextView: UITextView!
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet private weak var titleTextView: UITextView!
+    @IBOutlet private weak var numberLabel: UILabel!
+    @IBOutlet private weak var submitButton: UIButton!
+    
+    private let viewModel = ViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setUpBind()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func setUpBind() {
+        
+        self.titleTextView.rx.text.orEmpty
+            .bind(to: self.viewModel.title)
+            .disposed(by: disposeBag)
+        
+        self.viewModel.countTitle
+            .map({ count -> String in
+                String(count)
+            })
+            .bind(to: self.numberLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        self.viewModel.shouldSubmit
+            .bind(to: self.submitButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+    }
 }
 
