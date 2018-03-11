@@ -17,6 +17,7 @@
 		E648166B2054FB7B009244BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64816692054FB7B009244BD /* LaunchScreen.storyboard */; };
 		E64816762054FB7B009244BD /* RxSwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64816752054FB7B009244BD /* RxSwiftSampleTests.swift */; };
 		E64816812054FB7C009244BD /* RxSwiftSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64816802054FB7C009244BD /* RxSwiftSampleUITests.swift */; };
+		E648168F205501C0009244BD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648168E205501C0009244BD /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E648167C2054FB7B009244BD /* RxSwiftSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64816802054FB7C009244BD /* RxSwiftSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftSampleUITests.swift; sourceTree = "<group>"; };
 		E64816822054FB7C009244BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E648168E205501C0009244BD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				E64816602054FB7B009244BD /* AppDelegate.swift */,
 				E64816622054FB7B009244BD /* ViewController.swift */,
+				E648168E205501C0009244BD /* ViewModel.swift */,
 				E64816642054FB7B009244BD /* Main.storyboard */,
 				E64816672054FB7B009244BD /* Assets.xcassets */,
 				E64816692054FB7B009244BD /* LaunchScreen.storyboard */,
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E64816632054FB7B009244BD /* ViewController.swift in Sources */,
+				E648168F205501C0009244BD /* ViewModel.swift in Sources */,
 				E64816612054FB7B009244BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
