@@ -21,7 +21,7 @@ class ViewModel{
             text.count
         })
         self.shouldSubmit = self.countTitle.map({ count -> Bool in
-            0 < count && count < 20
+            0 < count && count <= 20
         })
     }
 }
